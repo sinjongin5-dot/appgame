@@ -1,0 +1,9 @@
+{
+  "appId": "com.kamifubuki.game",
+  "appName": "카미후부키",
+  "webDir": "www",
+  "backgroundColor": "#f2e8d5",
+  "android": {
+    "allowMixedContent": false
+  }
+}
