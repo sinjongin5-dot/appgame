@@ -29,6 +29,14 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
+      # Keep the generated debug signing key between builds so updated APKs can
+      # be installed over the previous build instead of requiring reinstall.
+      - name: Restore debug signing key
+        uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: kamifubuki-debug-keystore-v1
+
       - name: Install JavaScript dependencies
         run: npm install
 
